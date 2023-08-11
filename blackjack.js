@@ -12,6 +12,7 @@ var canHit = true; //allows you to hit while your sum is <=21
 
 //when window loads
 window.onload = function() {
+  
   buildDeck();
   shuffleDeck();
   startGame();
@@ -22,7 +23,7 @@ function buildDeck() {
  let types = ["s", "c", "d", "h"];
   var deck = [];
   for (let i = 0; i < types.length; i++){
-  for (let j = 0; j <values.length; j++){
+  for (let j = 0; j < values.length; j++){
       deck.push(values[j] + types[i]); //as --> ks; start loop again
   }
     }
@@ -30,7 +31,8 @@ function buildDeck() {
 }
 
 function shuffleDeck(){
-for (let i = 0; i< deck.length; i++){
+for (let i = 0; i< deck.length; i++)
+{
  let j= Math.floor( Math.random() * deck.length);
   let temp = deck[i];
   deck[i] = deck[j];
