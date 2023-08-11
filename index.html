@@ -4,8 +4,11 @@
 <meta charset= "UTF-8">
       <script src: "blackjack.js" ></script>
     </head>
+    
     <title> Blackjack: Created by Santi</title>
+    
     <style>
+      
       body{
 background-color: (0,100,0);
         font-family: Arial;
@@ -13,13 +16,13 @@ background-color: (0,100,0);
         
       }
 
-      #dealer-cards{
+      #dealer-cards img{
     height: 175px;
     width: 125px;
     margin: 2px;
       }
 
-       #your-cards{
+       #your-cards img {
     height: 175px;
     width: 125px;
     margin: 2px;
@@ -29,9 +32,13 @@ background-color: (0,100,0);
 
     <body>
       <h2>DEALER: <span id="dealer-sum"></span> </h2>
-      <div id= "dealer-cards"></div>
+      <div id= "dealer-cards">
+        <img src= "./cards/b.gif">
+      </div>
       <h2>YOU: <span id= "your-sum"> </span></h2> 
-      <div id= "your-cards"></div>
+      <div id= "your-cards">
+        
+      </div>
       
       <br>
       <button id="Hit"> Hit </button>
