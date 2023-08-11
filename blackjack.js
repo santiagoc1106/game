@@ -13,9 +13,11 @@ var canHit = true; //allows you to hit while your sum is <=21
 //when window loads
 window.onload = function() {
   buildDeck();
+  shuffleDeck();
+
 }
 
-fucntion buildDeck() {
+function buildDeck() {
  let values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
  let types = ["S", "C", "D", "H"];
   deck = [];
@@ -24,5 +26,14 @@ fucntion buildDeck() {
       deck.push(values[j]+ "-" + types[i]); //ace of (wtv) --> king of (wtv); start loop again
   }
     }
+  console.log(deck);
+}
+function shuffleDeck(){
+for (let i = 0; i< deck.length; i++){
+ let j= Math.floor( Math.random() * deck.length);
+  let temp = deck[i];
+  deck[i] = deck[j];
+  deck[j] = temp;
+} 
   console.log(deck);
 }
