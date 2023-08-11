@@ -52,7 +52,7 @@ function getValue(card){
   let value = data[0];
 
   if(isNaN(value)){
-    if (value == "A"{
+    if (value == "A"){
         return 11;
   }
     return 10;
