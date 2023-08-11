@@ -14,7 +14,7 @@ var canHit = true; //allows you to hit while your sum is <=21
 window.onload = function() {
   buildDeck();
   shuffleDeck();
-
+  startGame();
 }
 
 function buildDeck() {
@@ -26,7 +26,7 @@ function buildDeck() {
       deck.push(values[j]+ "-" + types[i]); //ace of (wtv) --> king of (wtv); start loop again
   }
     }
-  console.log(deck);
+  
 }
 
 function shuffleDeck(){
@@ -37,4 +37,32 @@ for (let i = 0; i< deck.length; i++){
   deck[j] = temp;
 } 
   console.log(deck);
+}
+
+function startGame(){
+  hidden = deck.pop();
+  dealerSum += getValue(hidden);
+  dealerAceCount += checkAce
+  console.log(hidden);
+  console.log(dealerSum);
+}
+
+function getValue(card){
+  let data = card.split("-");
+  let value = data[0];
+
+  if(isNaN(value)){
+    if (value == "A"{
+        return 11;
+  }
+    return 10;
+}
+return parseInt(value);
+}
+
+function checkAce(card){
+ if (card[0] == "A"){
+  return 1;
+ }
+  return 0;
 }
