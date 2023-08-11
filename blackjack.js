@@ -20,7 +20,7 @@ window.onload = function() {
 function buildDeck() {
  let values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
  let types = ["S", "C", "D", "H"];
-  deck = [];
+  var deck = [];
   for (let i = 0; i < types.length; i++){
   for (let j = 0; j <values.length; j++){
       deck.push(values[j]+ "-" + types[i]); //ace of (wtv) --> king of (wtv); start loop again
@@ -28,6 +28,7 @@ function buildDeck() {
     }
   console.log(deck);
 }
+
 function shuffleDeck(){
 for (let i = 0; i< deck.length; i++){
  let j= Math.floor( Math.random() * deck.length);
