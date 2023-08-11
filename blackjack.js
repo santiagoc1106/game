@@ -20,7 +20,7 @@ fucntion buildDeck() {
  let types = ["S", "C", "D", "H"];
   deck = [];
   for (let i = 0; i < types.length; i++){
-  for (let j - 0; j<values.length; j++){
+  for (let j = 0; j <values.length; j++){
       deck.push(values[j]+ "-" + types[i]); //ace of (wtv) --> king of (wtv); start loop again
   }
     }
