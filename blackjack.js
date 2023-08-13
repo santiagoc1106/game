@@ -68,7 +68,7 @@ for (let i = 0; i < 2; i++){
   console.log(playerSum);
   document.getElementById("hit").addEventListener("click", hit);
   document.getElementById("stay").addEventListener("click", stay);
-
+  document.getElementById("refresh").addEventListener("click", playAgain);
 }
 //Hit
 function hit (){
@@ -115,6 +115,11 @@ function stay(){
   document.getElementById("dealer-sum").innerText = dealerSum;
    document.getElementById("player-sum").innerText = playerSum;
   document.getElementById("results").innerText = message;
+  
+}
+
+function playAgain(){
+    reload();
 }
 //How to get the value of the card
 function getValue(card){
