@@ -45,19 +45,36 @@
       height: 50px;
       margin: 2px;
       }
+
+      #player-deck img{
+        height: 175px;
+        width: 125px;
+        margin: 2px;
+      }
+
+      #dealer-deck img{
+        height: 175px;
+        width: 125px;
+        margin: 2px;
+      }
     </style>
 
     <body>
       <h1>Blackjack by Santi</h1>
       <h2>DEALER: <span id="dealer-sum"></span> </h2>
+      <div id = "dealer-deck">
+      <img src= "./cards/b.gif">
+    </div>
       <div id= "dealer-cards">
       <img id= "hidden" src= "./cards/b.gif">
       </div>
       <h2>YOU: <span id= "player-sum"> </span></h2> 
       <div id= "player-cards">
-      <img id= "hidden" src= "./cards/b.gif">
+      
       </div>
-    
+    <div id = "player-deck">
+      <img src= "./cards/b.gif">
+    </div>
       <br>
       <button id="hit"> Hit </button>
        <button id="stay"> Stay </button>
