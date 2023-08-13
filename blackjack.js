@@ -54,14 +54,15 @@ function startGame(){
   }
   console.log(dealerSum);
 
-  for (let i = 0; i < 2; i++){
-let cardImg = document.createElement("img"); //<img src = "./card/4c"
+for (let i = 0; i < 2; i++){
+  let cardImg = document.createElement("img"); //<img src = "./card/4c"
   let card = deck.pop();
     cardImg.src = "./cards/" + card + ".gif";
     yourSum += getValue(card);
     yourAceCount += checkAce(card);
     document.getElementById("your-cards").append(cardImg);
   }
+  
   console.log(yourSum);
   document.getElementById("hit").addEventListener("click", hit);
 }
@@ -70,8 +71,9 @@ function hit (){
   if(!canHit){
       return;
 }
-let cardImg = document.createElement("img");
- let card = deck.pop();
+  
+  let cardImg = document.createElement("img");
+  let card = deck.pop();
     cardImg.src = "./cards/" + card + ".gif";
     yourSum += getValue(card);
     yourAceCount += checkAce(card);
