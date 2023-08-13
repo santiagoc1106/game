@@ -94,5 +94,22 @@
       <button id="stay" onclick: "showBtn()"> Stay </button>
       <div id = "refresh"> </div>
       <p id = "results">  </p>
+      <script>
+         
+
+  function showBtn(){
+     let myDiv = document.getElementById("refresh");
+            // creating button element
+            let button = document.createElement('BUTTON');
+            // creating text to be
+            //displayed on button
+            let text = document.createTextNode("Play Again");
+             
+            // appending text to button
+            button.appendChild(text);
+            // appending button to div
+            myDiv.appendChild(button);;
+  }
+      </script>
     </body>
   </html>
