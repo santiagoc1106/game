@@ -71,7 +71,7 @@ for (let i = 0; i < 2; i++){
   document.getElementById("stay").addEventListener("click", showBtn);
 
   function showBtn(){
-  document.getElementById("refresh").style.display = show;
+  document.getElementById("refresh").style.display = "show";
   }
 }
 //Hit
