@@ -117,9 +117,9 @@ function stay(){
   document.getElementById("results").innerText = message;
   
 }
-
+//Play Again
 function playAgain(){
-    reload();
+    location.reload(true);
 }
 //How to get the value of the card
 function getValue(card){
