@@ -62,7 +62,7 @@ for (let i = 0; i < 2; i++){
     document.getElementById("player-cards").append(cardImg);
   }
   
-  console.log(yourSum);
+  console.log(playerSum);
   document.getElementById("hit").addEventListener("click", hit);
   document.getElementById("stay").addEventListener("click", stay);
 }
