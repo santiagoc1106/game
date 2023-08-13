@@ -77,6 +77,9 @@ function hit (){
     yourSum += getValue(card);
     yourAceCount += checkAce(card);
     document.getElementById("your-cards").append(cardImg);
+
+  if(reduceAce(yourSum, yourAceCount) > 21)
+    canHit = false;
 }
 
 function getValue(card){
