@@ -17,6 +17,7 @@ window.onload = function() {
   startGame();
 }
 
+//Build the deck
 function buildDeck() {
  let values = ["a", "2", "3", "4", "5", "6", "7", "8", "9", "t", "j", "q", "k"];
  let types = ["s", "c", "d", "h"];
@@ -29,6 +30,7 @@ function buildDeck() {
 
 }
 
+//Shuffle the deck
 function shuffleDeck(){
 for (let i = 0; i< deck.length; i++){
  let j= Math.floor(Math.random() * deck.length);
@@ -38,11 +40,12 @@ for (let i = 0; i< deck.length; i++){
 } 
   console.log(deck);
 }
-
+//When the game starts
 function startGame(){
   hidden = deck.pop();
   dealerSum += getValue(hidden);
   dealerAceCount += checkAce(hidden)
+  //Give dealer cards
   while (dealerSum < 17){
   let cardImg = document.createElement("img"); //<img src = "./card/4c.gif"
   let card = deck.pop();
@@ -52,7 +55,7 @@ function startGame(){
     document.getElementById("dealer-cards").append(cardImg);
   }
   console.log(dealerSum);
-
+//Give player cards
 for (let i = 0; i < 2; i++){
   let cardImg = document.createElement("img"); //<img src = "./card/4c"
   let card = deck.pop();
@@ -66,7 +69,7 @@ for (let i = 0; i < 2; i++){
   document.getElementById("hit").addEventListener("click", hit);
   document.getElementById("stay").addEventListener("click", stay);
 }
-
+//Hit
 function hit (){
   if(!canHit){
       return;
@@ -82,7 +85,7 @@ function hit (){
   if(reduceAce(playerSum, playerAceCount) > 21)
     canHit = false;
 }
-
+//Stay
 function stay(){
   dealerSum = reduceAce(dealerSum, dealerAceCount);
   yourSum = reduceAce(playerSum, playerAceCount);
@@ -112,7 +115,7 @@ function stay(){
    document.getElementById("player-sum").innerText = playerSum;
   document.getElementById("results").innerText = message;
 }
-
+//How to get the value of the card
 function getValue(card){
   let data = card.split("-"); //4-c --> [4, c]
   let value = data[0];
@@ -125,14 +128,14 @@ function getValue(card){
 }
 return parseInt(value);
 }
-
+//Check if there are aces in hand
 function checkAce(card){
  if (card[0] == "a"){
   return 1;
  }
   return 0;
 }
-
+//If you have an ace and your total >21, change ace val from 11-->1
 function reduceAce(playerSum, playerAceCount) {
   while(playerSum> 21 && playerAceCount> 0) {
     playerSum -= 10;
