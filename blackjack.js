@@ -52,15 +52,16 @@ function startGame(){
     dealerAceCount += checkAce(card);
     document.getElementById("dealer-cards").append(cardImg);
   }
-  
+  console.log(hidden);
+  console.log(dealerSum);
 }
 
 function getValue(card){
   let data = card.split("-");
   let value = data[0];
 
-  if(isNaN(value)){
-    if (value == "A"){
+  if(isNaN(value)){// a j q k
+    if (value == "a"){
         return 11;
   }
     return 10;
@@ -69,7 +70,7 @@ return parseInt(value);
 }
 
 function checkAce(card){
- if (card[0] == "A"){
+ if (card[0] == "a"){
   return 1;
  }
   return 0;
