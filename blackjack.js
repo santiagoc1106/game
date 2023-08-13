@@ -27,13 +27,12 @@ function buildDeck() {
       deck.push(values[j] + types[i]); //as --> ks; start loop again
   }
     }
-  console.log(deck)
+
 }
 
 function shuffleDeck(){
-for (let i = 0; i< deck.length; i++)
-{
- let j= Math.floor( Math.random() * deck.length);
+for (let i = 0; i< deck.length; i++){
+ let j= Math.floor(Math.random() * deck.length);
   let temp = deck[i];
   deck[i] = deck[j];
   deck[j] = temp;
