@@ -144,6 +144,6 @@ function reduceAce(playerSum, playerAceCount) {
   return playerSum;
 }
 
-
-
-
+function showBtn(){
+document.querySelector("refresh").style.display = "block"; 
+}
