@@ -24,7 +24,7 @@ function buildDeck() {
   deck = [];
   for (let i = 0; i < types.length; i++){
   for (let j = 0; j < values.length; j++){
-      deck.push(values[j] + types[i]); //as --> ks; start loop again
+      deck.push(values[j] + "-" + types[i]); //a-s --> k-s; start loop again
   }
     }
 
@@ -67,7 +67,7 @@ let cardImg = document.createElement("img"); //<img src = "./card/4c"
 }
 
 function getValue(card){
-  let data = card.split(); //4c --> [4, c]
+  let data = card.split("-"); //4-c --> [4, c]
   let value = data[0];
 
   if(isNaN(value)){// a j q k
