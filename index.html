@@ -81,35 +81,30 @@
     <body>
       <h1>Blackjack by Santi</h1>
       <h2>DEALER: <span id="dealer-sum"></span> </h2>
+      
       <div id = "dealer-deck">
-      <img src= "./cards/b.gif">
-    </div>
+        <img src= "./cards/b.gif">
+       </div>
+      
       <div id= "dealer-cards">
+        
       <img id= "hidden" src= "./cards/b.gif">
+        
       </div>
+      
       <h2>YOU: <span id= "player-sum"> </span></h2> 
+      
       <div id= "player-cards"></div>
+      
       <br>
+      
       <button id="hit"><img id = "player-deck" src= "./cards/b.gif"></button>
+      
       <button id="stay" onclick: "showBtn()"> Stay </button>
-      <div id = "refresh"> </div>
+      
+      <button id = "refresh"> Play Again </button>
+      
       <p id = "results">  </p>
-      <script>
-         
-
-  function showBtn(){
-     let myDiv = document.getElementById("refresh");
-            // creating button element
-            let button = document.createElement('BUTTON');
-            // creating text to be
-            //displayed on button
-            let text = document.createTextNode("Play Again");
-             
-            // appending text to button
-            button.appendChild(text);
-            // appending button to div
-            myDiv.appendChild(button);;
-  }
-      </script>
+      
     </body>
   </html>
