@@ -1,9 +1,9 @@
 var dealerSum = 0;
-var yourSum = 0;
+var playerSum = 0;
 
 //keeps track of aces in deck
 var dealerAceCount= 0;
-var yourAceCount = 0;
+var playerAceCount = 0;
 
 var hidden;
 var deck;
@@ -57,9 +57,9 @@ for (let i = 0; i < 2; i++){
   let cardImg = document.createElement("img"); //<img src = "./card/4c"
   let card = deck.pop();
     cardImg.src = "./cards/" + card + ".gif";
-    yourSum += getValue(card);
-    yourAceCount += checkAce(card);
-    document.getElementById("your-cards").append(cardImg);
+    playerSum += getValue(card);
+    playerAceCount += checkAce(card);
+    document.getElementById("player-cards").append(cardImg);
   }
   
   console.log(yourSum);
@@ -75,41 +75,41 @@ function hit (){
   let cardImg = document.createElement("img");
   let card = deck.pop();
     cardImg.src = "./cards/" + card + ".gif";
-    yourSum += getValue(card);
-    yourAceCount += checkAce(card);
-    document.getElementById("your-cards").append(cardImg);
+    playerSum += getValue(card);
+    playerAceCount += checkAce(card);
+    document.getElementById("player-cards").append(cardImg);
 
-  if(reduceAce(yourSum, yourAceCount) > 21)
+  if(reduceAce(playerSum, playerAceCount) > 21)
     canHit = false;
 }
 
 function stay(){
   dealerSum = reduceAce(dealerSum, dealerAceCount);
-  yourSum = reduceAce(yourSum, yourAceCount);
+  yourSum = reduceAce(playerSum, playerAceCount);
 
   canHit = false;
   document.getElementById("hidden").src = "./cards/" + hidden + ".gif";
 
   let message = ""
   
-  if(yourSum > 21){
+  if(playerSum > 21){
     message = "Loser!"
   }
   else if (dealerSum > 21){
     message = "Winner!"
   }
   //both have sum <21
-  else if (yourSum == dealerSum){
+  else if (playerSum == dealerSum){
     message = "Uh oh! Tie!"
   }
-  else if (yourSum > dealerSum){
+  else if (playerSum > dealerSum){
     message = "Winner!"
   }
-  else if (yourSum < dealerSum){
+  else if (playerSum < dealerSum){
     message = "Loser"
   }
   document.getElementById("dealer-sum").innerText = dealerSum;
-   document.getElementById("your-sum").innerText = yourSum;
+   document.getElementById("player-sum").innerText = playerSum;
   document.getElementById("results").innerText = message;
 }
 
