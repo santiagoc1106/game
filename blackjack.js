@@ -45,14 +45,13 @@ function startGame(){
   dealerSum += getValue(hidden);
   dealerAceCount += checkAce
   while (dealerSum < 17){
-  let cardImg = document.createElement("img");
+  let cardImg = document.createElement("img"); //<img src = "./card/4c"
   let card = deck.pop();
     cardImg.src = "./cards/" + card + ".gif";
     dealerSum += getValue(card);
     dealerAceCount += checkAce(card);
     document.getElementById("dealer-cards").append(cardImg);
   }
-  console.log(hidden);
   console.log(dealerSum);
 }
 
