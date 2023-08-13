@@ -147,7 +147,7 @@ function reduceAce(playerSum, playerAceCount) {
 document.querySelector("refresh").style.display = "none";
 document.querySelector("stay").addEventListener("click", showBtn);
 
-function showBtn(){
+function showBtn(e){
 document.querySelector("refresh").style.display = 'block'; 
  e.preventDefault(); 
 }
