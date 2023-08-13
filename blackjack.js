@@ -66,6 +66,17 @@ let cardImg = document.createElement("img"); //<img src = "./card/4c"
   document.getElementById("hit").addEventListener("click", hit);
 }
 
+function hit (){
+if(!canHit){
+return;
+}
+ let card = deck.pop();
+    cardImg.src = "./cards/" + card + ".gif";
+    yourSum += getValue(card);
+    yourAceCount += checkAce(card);
+    document.getElementById("your-cards").append(cardImg);
+}
+
 function getValue(card){
   let data = card.split("-"); //4-c --> [4, c]
   let value = data[0];
