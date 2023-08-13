@@ -63,10 +63,11 @@ let cardImg = document.createElement("img"); //<img src = "./card/4c"
     document.getElementById("your-cards").append(cardImg);
   }
   console.log(yourSum);
+  document.getElementById("hit").addEventListener("click", hit);
 }
 
 function getValue(card){
-  let data = card.split("-");
+  let data = card.split(); //4c --> [4, c]
   let value = data[0];
 
   if(isNaN(value)){// a j q k
