@@ -68,6 +68,11 @@ for (let i = 0; i < 2; i++){
   console.log(playerSum);
   document.getElementById("hit").addEventListener("click", hit);
   document.getElementById("stay").addEventListener("click", stay);
+  document.getElementById("stay").addEventListener("click", showBtn);
+
+  function showBtn(){
+  document.getElementById("refresh").style.display = show;
+  }
 }
 //Hit
 function hit (){
@@ -143,5 +148,6 @@ function reduceAce(playerSum, playerAceCount) {
   }
   return playerSum;
 }
+
 
 
