@@ -68,10 +68,20 @@ for (let i = 0; i < 2; i++){
   console.log(playerSum);
   document.getElementById("hit").addEventListener("click", hit);
   document.getElementById("stay").addEventListener("click", stay);
-  document.getElementById("stay").addEventListener("click", showBtn);
+  
 
   function showBtn(){
-  document.getElementById("refresh").style.display = "show";
+     let myDiv = document.getElementById("refresh");
+            // creating button element
+            let button = document.createElement('BUTTON');
+            // creating text to be
+            //displayed on button
+            let text = document.createTextNode("Play Again");
+             
+            // appending text to button
+            button.appendChild(text);
+            // appending button to div
+            myDiv.appendChild(button);;
   }
 }
 //Hit
