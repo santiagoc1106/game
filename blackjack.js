@@ -64,6 +64,7 @@ for (let i = 0; i < 2; i++){
   
   console.log(yourSum);
   document.getElementById("hit").addEventListener("click", hit);
+  document.getElementById("stay").addEventListener("click", stay);
 }
 
 function hit (){
@@ -80,6 +81,36 @@ function hit (){
 
   if(reduceAce(yourSum, yourAceCount) > 21)
     canHit = false;
+}
+
+function stay(){
+  dealerSum = reduceAce(dealerSum, dealerAceCount);
+  yourSum = reduceAce(yourSum, yourAceCount);
+
+  canHit = false;
+  document.getElementById("hidden").src = "./cards/" + hidden + ".gif";
+
+  let message = ""
+  
+  if(yourSum > 21){
+    message = "Loser!"
+  }
+  else if (dealerSum > 21){
+    message = "Winner!"
+  }
+  //both have sum <21
+  else if (yourSum == dealerSum){
+    message = "Uh oh! Tie!"
+  }
+  else if (yourSum > dealerSum){
+    message = "Winner!'
+  }
+  else if (yourSum < dealerSum){
+    message = "Loser'
+  }
+  document.getElementById("dealer-sum").innerText = dealerSum;
+   document.getElementById("your-sum").innerText = yourSum;
+  document.getElementById("results").innerText = message;
 }
 
 function getValue(card){
