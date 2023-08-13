@@ -43,9 +43,9 @@ for (let i = 0; i< deck.length; i++){
 function startGame(){
   hidden = deck.pop();
   dealerSum += getValue(hidden);
-  dealerAceCount += checkAce
+  dealerAceCount += checkAce(hidden)
   while (dealerSum < 17){
-  let cardImg = document.createElement("img"); //<img src = "./card/4c"
+  let cardImg = document.createElement("img"); //<img src = "./card/4c.gif"
   let card = deck.pop();
     cardImg.src = "./cards/" + card + ".gif";
     dealerSum += getValue(card);
