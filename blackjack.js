@@ -12,7 +12,6 @@ var canHit = true; //allows you to hit while your sum is <=21
 
 //when window loads
 window.onload = function() {
-  
   buildDeck();
   shuffleDeck();
   startGame();
