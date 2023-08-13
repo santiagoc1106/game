@@ -67,9 +67,10 @@ let cardImg = document.createElement("img"); //<img src = "./card/4c"
 }
 
 function hit (){
-if(!canHit){
-return;
+  if(!canHit){
+      return;
 }
+let cardImg = document.createElement("img");
  let card = deck.pop();
     cardImg.src = "./cards/" + card + ".gif";
     yourSum += getValue(card);
