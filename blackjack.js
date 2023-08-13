@@ -109,7 +109,7 @@ function stay(){
     message = "Winner!"
   }
   else if (playerSum < dealerSum){
-    message = "Loser"
+    message = "Loser!"
   }
   document.getElementById("dealer-sum").innerText = dealerSum;
    document.getElementById("player-sum").innerText = playerSum;
@@ -147,7 +147,6 @@ function reduceAce(playerSum, playerAceCount) {
 
 document.querySelector("stay").addEventListener("click", showBtn);
 
-function showBtn(e){
+function showBtn(){
 document.querySelector("refresh").style.display = "block"; 
- e.preventDefault(); 
 }
