@@ -53,6 +53,16 @@ function startGame(){
     document.getElementById("dealer-cards").append(cardImg);
   }
   console.log(dealerSum);
+
+  for (let i = 0; i < 2; i++){
+let cardImg = document.createElement("img"); //<img src = "./card/4c"
+  let card = deck.pop();
+    cardImg.src = "./cards/" + card + ".gif";
+    yourSum += getValue(card);
+    yourAceCount += checkAce(card);
+    document.getElementById("your-cards").append(cardImg);
+  }
+  console.log(yourSum);
 }
 
 function getValue(card){
