@@ -103,10 +103,10 @@ function stay(){
     message = "Uh oh! Tie!"
   }
   else if (yourSum > dealerSum){
-    message = "Winner!'
+    message = "Winner!"
   }
   else if (yourSum < dealerSum){
-    message = "Loser'
+    message = "Loser"
   }
   document.getElementById("dealer-sum").innerText = dealerSum;
    document.getElementById("your-sum").innerText = yourSum;
