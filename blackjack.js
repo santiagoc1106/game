@@ -21,7 +21,7 @@ window.onload = function() {
 function buildDeck() {
  let values = ["a", "2", "3", "4", "5", "6", "7", "8", "9", "10", "j", "q", "k"];
  let types = ["s", "c", "d", "h"];
-  var deck = [];
+  deck = [];
   for (let i = 0; i < types.length; i++){
   for (let j = 0; j < values.length; j++){
       deck.push(values[j] + types[i]); //as --> ks; start loop again
