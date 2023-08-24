@@ -19,7 +19,7 @@ window.onload = function() {
 
 //Build the deck
 function buildDeck() {
- let values = ["a", "2", "3", "4", "5", "6", "7", "8", "9", "t", "j", "q", "k"];
+ let values = ["a", "2", "3", "4", "5", "6", "7", "8", "9", "10", "j", "q", "k"];
  let types = ["s", "c", "d", "h"];
   deck = [];
   for (let i = 0; i < types.length; i++){
