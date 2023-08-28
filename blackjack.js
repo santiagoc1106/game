@@ -78,7 +78,7 @@ function hit (){
   
   let cardImg = document.createElement("img");
   let card = deck.pop();
-    cardImg.src = "./.PNG-cards-1.3/" + card + ".png";
+    cardImg.src = "./PNG-cards-1.3/" + card + ".png";
     playerSum += getValue(card);
     playerAceCount += checkAce(card);
     document.getElementById("player-cards").append(cardImg);
