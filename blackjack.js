@@ -15,7 +15,6 @@ window.onload = function() {
   buildDeck();
   shuffleDeck();
   startGame();
-  giveCard();
 }
 
 //Build the deck
@@ -152,25 +151,4 @@ function reduceAce(playerSum, playerAceCount) {
   return playerSum;
 }
 
-//Animation
-function giveCard(){
-
-  function draw(){
-    let id = null
-    const elem = document.getElementById("dealer-cards");
-    let pos = 0;
-    clearInterval(id);
-  id = setInterval(frame, 5);
-  function frame() {
-    if (pos == 350) {
-      clearInterval(id);
-    } else {
-      pos++;
-      elem.style.top = pos + 'px';
-      elem.style.left = pos + 'px';
-  }
-  
-}
-  }
-}
 
