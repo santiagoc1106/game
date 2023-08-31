@@ -155,6 +155,9 @@ function reduceAce(playerSum, playerAceCount) {
 //Animation
 function giveCard(){
 
+  function draw(){
+      document.getElementById(#dealer-deck)
+  }
   
 }
 
