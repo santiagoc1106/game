@@ -15,7 +15,7 @@ window.onload = function() {
   buildDeck();
   shuffleDeck();
   startGame();
-  dealCards();
+  giveCard();
 }
 
 //Build the deck
@@ -83,6 +83,7 @@ function hit (){
     playerSum += getValue(card);
     playerAceCount += checkAce(card);
     document.getElementById("player-cards").append(cardImg);
+    giveCard();
 
   if(reduceAce(playerSum, playerAceCount) > 21)
     canHit = false;
@@ -152,7 +153,8 @@ function reduceAce(playerSum, playerAceCount) {
 }
 
 //Animation
+function giveCard(){
 
-function dealCards(){
-
+  
 }
+
