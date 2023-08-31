@@ -1,4 +1,4 @@
-<DOCTYPE html>
+<DOCTYPE! html>
   <html>
     <head>
     <meta charset= "UTF-8">
@@ -25,20 +25,22 @@
       }
 
     p{
-    font-size: 50px
-    background-color: rgb(0,0,0);
     color: rgb(255,255,255);
     }
       
   #dealer-cards img{
+    position: relative;
+    top: 160px;
+    bottom: 50px;
     height: 175px;
     width: 125px;
-    position: relative;
-    top: 125px;
     margin: 2px;
       }
 
-       #player-cards img {
+       #player-cards img{
+    position: relative;
+    top: 100px;
+    bottom: 50px;
     height: 175px;
     width: 125px;
     margin: 2px;
@@ -58,23 +60,19 @@
       height: 50px;
       margin: 2px;
       position: relative;
+      top:100px;
       left: 140px
       }
 
-      #player-deck{
+      #dealer-deck{
+        position:relative;
+        bottom: 30px;
+        right:140px;
         height: 175px;
         width: 125px;
         margin: 2px;
       }
 
-      #dealer-deck{
-        height: 175px;
-        width: 125px;
-        align: center;
-       
-        
-        
-      }
 
       #refresh {
         width: 75px;
@@ -82,14 +80,25 @@
         margin: 2px;
         position: relative;
         left: 180px;
-        bottom: 8px;
+        top: 92px;
         
+      }
+      #player{
+        text-align: center;
+        position: relative;
+        top: 110px;
+        bottom: 75px;
+      }
+
+      #player-ui{
+        position:relative;
+        top: 50px;
       }
     </style>
 
     <body>
       <h1>Blackjack by Santi</h1>
-      <h2>DEALER: <span id="dealer-sum"></span> 
+      <h2 id="dealer">DEALER: <span id="dealer-sum"></span> 
       
       </h2>
 
@@ -101,8 +110,9 @@
       <img id= "hidden" src= "./PNG-cards-1.3/b.png">
         
       </div>
-      
-      <h2>YOU: <span id= "player-sum"> </span></h2> 
+
+      <div id="player-ui">
+      <h2 id="player">YOU: <span id= "player-sum"> </span></h2> 
       
       <div id= "player-cards"></div>
       
@@ -113,6 +123,6 @@
       <button id = "refresh"> Play Again </button>
       
       <p id = "results">  </p>
-      
+      </div>
     </body>
   </html>
