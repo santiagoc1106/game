@@ -15,6 +15,7 @@ window.onload = function() {
   buildDeck();
   shuffleDeck();
   startGame();
+  dealCards();
 }
 
 //Build the deck
@@ -152,4 +153,6 @@ function reduceAce(playerSum, playerAceCount) {
 
 //Animation
 
+function dealCards(){
 
+}
