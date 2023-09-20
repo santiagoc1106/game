@@ -53,6 +53,7 @@ function startGame(){
     dealerSum += getValue(card);
     dealerAceCount += checkAce(card);
     document.getElementById("dealer-cards").append(cardImg);
+    reduceAce(playerSum, playerAceCount);
   }
   console.log(dealerSum);
 //Give player cards
@@ -63,12 +64,14 @@ for (let i = 0; i < 2; i++){
     playerSum += getValue(card);
     playerAceCount += checkAce(card);
     document.getElementById("player-cards").append(cardImg);
+    reduceAce(playerSum, playerAceCount);
   }
   
   console.log(playerSum);
   document.getElementById("hit").addEventListener("click", hit);
   document.getElementById("stay").addEventListener("click", stay);
   document.getElementById("refresh").addEventListener("click", playAgain);
+  document.getElementById("player-sum").innerText = playerSum;
 }
 //Hit
 function hit (){
@@ -82,10 +85,9 @@ function hit (){
     playerSum += getValue(card);
     playerAceCount += checkAce(card);
     document.getElementById("player-cards").append(cardImg);
-    giveCard();
-
-  if(reduceAce(playerSum, playerAceCount) > 21)
-    canHit = false;
+    document.getElementById("player-sum").innerText = playerSum;
+  if(reduceAce(playerSum, playerAceCount) > 21){canHit = false;}
+    
 }
 //Stay
 function stay(){
@@ -114,7 +116,7 @@ function stay(){
     message = "Loser!"
   }
   document.getElementById("dealer-sum").innerText = dealerSum;
-   document.getElementById("player-sum").innerText = playerSum;
+  document.getElementById("player-sum").innerText = playerSum;
   document.getElementById("results").innerText = message;
   
 }
@@ -137,6 +139,7 @@ return parseInt(value);
 }
 //Check if there are aces in hand
 function checkAce(card){
+ 
  if (card[0] == "a"){
   return 1;
  }
@@ -144,7 +147,9 @@ function checkAce(card){
 }
 //If you have an ace and your total >21, change ace val from 11-->1
 function reduceAce(playerSum, playerAceCount) {
-  while(playerSum> 21 && playerAceCount> 0) {
+  console.log(playerSum)
+  console.log(playerAceCount)
+  while(playerSum > 21 && playerAceCount > 0) {
     playerSum -= 10;
     playerAceCount -= 1;
   }
