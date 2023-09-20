@@ -66,8 +66,6 @@ for (let i = 0; i < 2; i++){
     document.getElementById("player-cards").append(cardImg);
     reduceAce(playerSum, playerAceCount);
   }
-  
-  console.log(playerSum);
   document.getElementById("hit").addEventListener("click", hit);
   document.getElementById("stay").addEventListener("click", stay);
   document.getElementById("refresh").addEventListener("click", playAgain);
